@@ -1,0 +1,10 @@
+//Importing font-awesome and all fonts
+@import "../assets/font-awesome/scss/font-awesome.scss";
+$font-path: "../assets/fonts";
+
+@font-face {
+  font-family: "Trueno";
+  src: url("#{$font-path}/TruenoRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

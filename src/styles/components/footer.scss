@@ -1,0 +1,18 @@
+footer {
+  opacity: 0.5;
+  width: 100vw;
+  border-top: 1px solid lightgray;
+  color: lightgrey;
+  vertical-align: middle;
+  text-align: left;
+  font-family: "Trueno";
+  line-height: 3vh;
+  height: 3vh;
+  font-size: 1.5vmin;
+
+  @media only screen and (max-width: 991px) {
+    line-height: 5vh;
+    height: 5vh;
+    font-size: 3vmin;
+  }
+}

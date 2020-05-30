@@ -1,0 +1,116 @@
+.contact {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding-top: 10vh;
+  color: rgb(69, 77, 76);
+  display: block;
+
+  h1 {
+    font-size: 8vmin;
+    font-family: "Trueno";
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 20vh;
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 10vh;
+    }
+  }
+
+  form {
+    font-size: 2vmin;
+    font-family: "Trueno";
+    color: rgb(216, 216, 216);
+    display: inline;
+    input,
+    textarea {
+      color: black;
+      width: 100%;
+      margin-bottom: 1vh;
+      transition-duration: 0.5s;
+    }
+
+    textarea {
+      resize: none;
+      height: 25vh;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__submit-button {
+    margin: 0 auto;
+    height: 5vh;
+    @include background-gradient(45deg, #32abda, #ff8f84);
+    border-radius: 4px;
+    text-align: center;
+
+    input {
+      background: none;
+      border: 0;
+      font: inherit;
+      line-height: normal;
+      overflow: visible;
+      padding: 0;
+      margin: 0;
+      border-radius: 2px;
+      -webkit-appearance: button;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    div {
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      border-radius: 4px;
+      margin: 0 auto;
+      background: white;
+      position: relative;
+      top: 1px;
+
+      input {
+        position: absolute;
+        display: inline;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0px;
+        color: black;
+        background-size: 80%;
+        background-image: -moz-linear-gradient(45deg, #32abda 0%, #ff8f84 100%);
+        background-image: -webkit-linear-gradient(
+          45deg,
+          #32abda 0%,
+          #ff8f84 100%
+        );
+        background-image: -ms-linear-gradient(45deg, #32abda 0%, #ff8f84 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  &__submit-wrapper {
+    padding-right: 0;
+  }
+
+  &__right-contact {
+    font-size: 3.7vmin;
+    color: rgb(69, 77, 76);
+    font-family: "Trueno";
+    text-align: left;
+    margin-top: 10vh;
+  }
+
+  &__element {
+    height: 8vh;
+    white-space: nowrap;
+
+    img {
+      height: 6vh;
+      margin-right: 15px;
+    }
+  }
+}

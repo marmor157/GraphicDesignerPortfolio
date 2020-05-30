@@ -1,0 +1,51 @@
+@import "bootstrap.scss";
+@import "partials/_base";
+@import "partials/_variables";
+@import "partials/_mixins";
+@import "partials/_reset";
+@import "partials/_fonts";
+
+//Import all components scss files
+@import "./components/components";
+
+a,
+a:hover,
+a:visited,
+a:link,
+a:active {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  padding: 0 40px;
+  position: relative;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0px 1vh 1vh 0;
+  display: inline-block;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 1vh;
+}
+
+.down {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.row.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,174 @@
+.welcome-screen {
+  height: 100vh;
+  position: relative;
+  padding: 0;
+
+  &--animate {
+    animation: animate-welcome-right 1.5s linear;
+
+    .welcome-screen__background {
+      background-image: url("../assets/img/welcome-right.png");
+    }
+  }
+
+  @keyframes animate-welcome-right {
+    0% {
+      right: -100%;
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      right: 0px;
+      opacity: 0.9;
+    }
+  }
+
+  &__right-section {
+    height: 100%;
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.9;
+  }
+
+  &__background {
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    width: 60%;
+    height: 100%;
+    right: 0px;
+    @media only screen and (max-width: 991px) {
+      width: 80%;
+    }
+  }
+
+  &__left-section {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    //padding: 15px;
+    padding-right: 0px;
+    min-width: 300px;
+  }
+
+  &__logo-container {
+    margin: 20px 0 0 0px;
+    font-size: 16px;
+    font-family: "Trueno";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 2.5;
+  }
+
+  &__image-wrapper {
+    text-align: left;
+  }
+  &__text-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__my-work-wrapper {
+    position: absolute;
+    bottom: 20vh;
+    text-align: center;
+
+    @keyframes view-work-animate {
+      0% {
+        width: 100%;
+      }
+      10% {
+        width: 80%;
+      }
+      20% {
+        width: 80%;
+      }
+      30% {
+        width: 100%;
+      }
+    }
+  }
+
+  &__my-work {
+    margin: 0 auto;
+    font-size: 24px;
+    font-family: "Trueno";
+    color: rgb(69, 77, 76);
+    line-height: 1.2;
+    word-break: keep-all;
+    display: inline-block;
+
+    hr {
+      border: 1px solid rgb(69, 77, 76);
+      width: 100%;
+      animation: view-work-animate 3s linear infinite;
+      margin-top: 10px;
+    }
+  }
+
+  &__main-title-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    text-align: center;
+  }
+
+  &__main-title {
+    word-break: keep-all;
+    word-wrap: normal;
+    font-size: 8vmin;
+    font-family: "Trueno";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: left;
+    border-top: solid 4px #ff8f84;
+    border-bottom: solid 4px #32abda;
+    z-index: 3;
+    padding: 20px;
+    left: -25px;
+    transform: translate(0, -50%);
+    letter-spacing: 1px;
+  }
+
+  &__button-godown {
+    bottom: 20px;
+    left: 50%;
+    position: absolute;
+    animation: animate-button-down 1s linear infinite;
+    animation-delay: 1.5s;
+    z-index: 99;
+
+    div {
+      position: relative;
+      left: -50%;
+      i {
+        display: flex;
+      }
+    }
+
+    @keyframes animate-button-down {
+      0% {
+        bottom: 20px;
+      }
+      25% {
+        bottom: 10px;
+      }
+      50% {
+        bottom: 10px;
+      }
+      75% {
+        bottom: 20px;
+      }
+    }
+  }
+}

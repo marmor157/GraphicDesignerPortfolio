@@ -1,0 +1,53 @@
+.about {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  &__portrait-wrapper {
+    position: relative;
+    width: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+    &:before {
+      padding-top: 100%;
+      display: block;
+      content: "";
+    }
+  }
+
+  &__portrait {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    background-image: url("../assets/img/mordka.png");
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__text {
+    @media only screen and (max-width: 991px) {
+      text-align: center;
+    }
+    h1 {
+      font-size: 6vmin;
+      font-family: "Trueno";
+      color: rgb(69, 77, 76);
+      font-weight: bold;
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: 5vh;
+    }
+
+    font-size: 3vmin;
+    font-family: "Trueno";
+    color: rgb(69, 77, 76);
+    line-height: 1.2;
+  }
+}

@@ -1,0 +1,200 @@
+.my-skills {
+  height: 100vh;
+  width: 100%;
+  font-family: "Trueno";
+  h1 {
+    font-size: 8vmin;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 5vh;
+    color: rgb(69, 77, 76);
+    margin-bottom: 25vh;
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 10vh;
+    }
+    text-align: center;
+  }
+
+  &__circle {
+    @include background-gradient(45deg, #32abda 0%, #ff8f84 100%);
+    border-radius: 991px;
+    width: 80%;
+    padding-top: 80%;
+    position: relative;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 10vw;
+    }
+
+    &__left-half {
+      width: 50%;
+      padding-top: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0%;
+      div {
+        background-color: rgba(255, 255, 255, 0.4);
+        width: 200%;
+        padding-top: 200%;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        transform-origin: center right;
+      }
+    }
+
+    &__right-half {
+      width: 50%;
+      padding-top: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      div {
+        background-color: rgba(255, 255, 255, 0.4);
+        width: 200%;
+        padding-top: 200%;
+        position: absolute;
+        top: 0;
+        transform-origin: center left;
+      }
+    }
+
+    &__animation {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-top: 100%;
+    }
+  }
+
+  &__circle-text {
+    position: absolute;
+    text-align: center;
+    top: 105%;
+    width: 100%;
+    font-size: 2.5vh;
+    font-weight: bold;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 5vw;
+    }
+  }
+
+  &__percentage-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+  }
+
+  &__percentage-circle {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    @include box-shadow(0px, 0px, 1.5vw, -2px, rgba(0, 0, 0, 0.6), true);
+
+    @media only screen and (max-width: 991px) {
+      @include box-shadow(0px, 0px, 3vw, -2px, rgba(0, 0, 0, 0.6));
+    }
+  }
+
+  &__percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vw;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 6vw;
+    }
+  }
+
+  &__progress-90 {
+    .my-skills__circle__left-half div {
+      animation: progress-bar-90-left 0.4s linear forwards;
+      animation-delay: 0.5s;
+    }
+  }
+  &__progress-80 {
+    .my-skills__circle__left-half div {
+      animation: progress-bar-80-left 0.3s linear forwards;
+      animation-delay: 0.5s;
+    }
+  }
+  &__progress-75 {
+    .my-skills__circle__left-half div {
+      animation: progress-bar-75-left 0.25s linear forwards;
+      animation-delay: 0.5s;
+    }
+  }
+  &__progress-60 {
+    .my-skills__circle__left-half div {
+      animation: progress-bar-60-left 0.1s linear forwards;
+      animation-delay: 0.5s;
+    }
+  }
+  div[class*="my-skills__progress-"] {
+    .my-skills__circle__right-half div {
+      animation: progress-bar-right 0.5s linear forwards;
+    }
+  }
+
+  @keyframes progress-bar-right {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes progress-bar-90-left {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(144deg);
+      transform: rotate(144deg);
+    }
+  }
+  @keyframes progress-bar-80-left {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(108deg);
+      transform: rotate(108deg);
+    }
+  }
+  @keyframes progress-bar-75-left {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+  @keyframes progress-bar-60-left {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(36deg);
+      transform: rotate(36deg);
+    }
+  }
+}
