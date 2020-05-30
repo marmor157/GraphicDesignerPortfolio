@@ -138,7 +138,8 @@ function changeLanguage(lan) {
 
   document.querySelector(".welcome-screen__main-title").innerHTML = lan.title;
   document.querySelector(".welcome-screen__my-work").innerHTML = lan.myWork;
-  $(".about-text").html("<h1>Wojciech Ścieszka</h1>" + lan.aboutMe);
+  document.querySelector(".about__text").innerHTML =
+    "<h1> Lorem ipsum </h1>" + lan.aboutMe;
   document.querySelector(".my-skills__title").children.innerHTML = lan.skills;
   document.querySelector(".langauges-title").children.innerHTML =
     lan.languagesTitle;
