@@ -1,5 +1,5 @@
 import "./styles/main.scss";
-import "./assets/js/languages.js";
+const languages = require("./assets/js/languages.js");
 
 var language;
 alert = function (text, type) {
