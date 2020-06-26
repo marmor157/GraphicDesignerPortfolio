@@ -2,7 +2,7 @@
 A Graphic desigher portfolio written used HTML, Sass, Bootstrap and Webpack
 
 ## Live demo
-Live demo is avaiable on https://https://graphic-portfolio-marmor.herokuapp.com/.
+Live demo is avaiable on https://graphic-portfolio-marmor.herokuapp.com/.
 
 ### Prerequisites
 
